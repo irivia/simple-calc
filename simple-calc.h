@@ -404,7 +404,7 @@ NUM_TYPE sc_unary(SC_Parser *parser)
     switch (token.type) {
         case SC_PLUS:
             result = sc_expression(parser, SC_PREC_UNARY);
-            if (result < 0) result *= -1;
+            // if (result < 0) result *= 1; // do nothing apparently according to Python's 'eval()'
             break;
         case SC_HYPHEN:
             result = -sc_expression(parser, SC_PREC_UNARY);
