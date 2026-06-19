@@ -63,7 +63,7 @@ typedef enum {
 typedef struct {
     const char *begin;
     const char *end;
-    SC_TokenType type;
+    uint8_t type;
 } SC_Token;
 
 #define SC_TOKEN_LEN(token) ((int)((token).end - (token).begin + 1))
