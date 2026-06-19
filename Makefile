@@ -10,10 +10,10 @@ DEBUG=test-deb
 
 all: $(EXE) $(DEBUG)
 
-$(EXE): $(SRC) $(HEADERS)
+$(EXE): $(SRC) $(HEADERS) ./simple-calc.h
 	$(CC) $(CFLAGS) -o $(EXE) $(SRC) $(LFLAGS)
 
-$(DEBUG): $(SRC) $(HEADERS)
+$(DEBUG): $(SRC) $(HEADERS) ./simple-calc.h
 	$(CC) $(DFLAGS) -o $(DEBUG) $(SRC) $(LFLAGS)
 
 run: $(EXE)
