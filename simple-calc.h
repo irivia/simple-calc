@@ -21,7 +21,9 @@
     #define SC_FREE(ptr) free(ptr)
 #endif
 
-#define SC_LIST_DEFAULT_CAP 64
+#ifndef SC_LIST_DEFAULT_CAP
+    #define SC_LIST_DEFAULT_CAP 64
+#endif
 
 #define sc_list_append(list, item)                                                                               \
     do {                                                                                                         \
